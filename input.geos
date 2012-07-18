@@ -1,4 +1,4 @@
-GEOS-CHEM SIMULATION v9-01-02: MERRA NOx-Ox-HC-Aerosol simulation (43 tracers)
+GEOS-CHEM SIMULATION v9-01-03: MERRA NOx-Ox-HC-Aerosol simulation (53 tracers)
 ------------------------+------------------------------------------------------
 %%% SIMULATION MENU %%% :
 Start YYYYMMDD, HHMMSS  : 20050701 000000
@@ -7,23 +7,22 @@ Run directory           : ./
 Input restart file      : restart.4x5.merra.YYYYMMDDhh
 Make new restart file?  : T
 Output restart file(s)  : restart.4x5.merra.YYYYMMDDhh
-Root data directory     : /as/group/geos/data/GEOS_4x5/
- => GCAP   subdirectory : AGRID/YYYY/MM/
- => GEOS-3 subdirectory : GEOS_3/YYYY/MM/
- => GEOS-4 subdirectory : GEOS_4_v4/YYYY/MM/
- => GEOS-5 subdirectory : GEOS_5/YYYY/MM/
- => MERRA  subdirectory : MERRA/YYYY/MM/
-Dir w/ 1x1 emissions etc: /as/group/geos/data/GEOS_1x1/
+Root data directory     : /as/data/geos/GEOS_4x5/
+ => GCAP       subdir   : AGRID/YYYY/MM/
+ => GEOS-4     subdir   : GEOS_4_v4/YYYY/MM/
+ => GEOS-5     subdir   : GEOS_5/YYYY/MM/
+ => GEOS-5.7.x subdir   : GEOS_5.7/YYYY/MM/
+ => MERRA      subdir   : MERRA/YYYY/MM/
+Dir w/ 1x1 emissions etc: /as/data/geos/GEOS_1x1/
 Temporary directory     : ./
 Unzip met fields?       : F
 Wait for met fields?    : F
 Use variable tropopause?: T
-Use LINOZ strat chem?   : T
 Global offsets I0, J0   : 0 0
 ------------------------+------------------------------------------------------
 %%% TRACER MENU %%%     : 
 Type of simulation      : 3
-Number of Tracers       : 43
+Number of Tracers       : 53                       
 Tracer Entries -------> : TR#   Name  g/mole   Tracer Members; () = emitted 
 Tracer #1               :   1   NOx     46.0   NO2  (NO)  NO3   HNO2      
 Tracer #2               :   2   Ox      48.0   (O3)  NO2   2NO3  
@@ -68,6 +67,16 @@ Tracer #40              :  40   DST3    29.0
 Tracer #41              :  41   DST4    29.0
 Tracer #42              :  42   SALA    36.0
 Tracer #43              :  43   SALC    36.0
+Tracer #44              :  44   Br2    160.0   (Br2)
+Tracer #45              :  45   Br      80.0
+Tracer #46              :  46   BrO     96.0
+Tracer #47              :  47   HOBr    97.0
+Tracer #48              :  48   HBr     81.0
+Tracer #49              :  49   BrNO2  126.0
+Tracer #50              :  50   BrNO3  142.0
+Tracer #51              :  51   CHBr3  253.0   (CHBr3)
+Tracer #52              :  52   CH2Br2 174.0   (CH2Br2)
+Tracer #53              :  53   CH3Br   95.0
 ------------------------+------------------------------------------------------
 %%% TRANSPORT MENU %%%  :
 Turn on Transport       : T
@@ -75,7 +84,6 @@ Turn on Transport       : T
  => Fill Negative Values: T 
  => IORD, JORD, KORD    : 3  3  7
 Transport Timestep [min]: 30   
-Use strat O3/NOy BC's   : T
 ------------------------+------------------------------------------------------
 %%% CONVECTION MENU %%% :
 Turn on Cloud Conv?     : T
@@ -114,9 +122,8 @@ Include biomass emiss?  : T
     => synoptic GFED2?  : F
  => Use GFED3 biomass?  :---
     => monthly GFED3?   : T 
-    => 8-day GFED3?     : F 
+    => daily GFED3?     : F 
     => 3-hr GFED3?      : F
-    => synoptic GFED3?  : F
 Individual NOx sources  :---
  => Use aircraft NOx?   : T
  => Use lightning NOx?  : T
@@ -133,6 +140,13 @@ Use ship SO2 emissions? :---
 Use COOKE BC/OC (N. Am.): F   
 Use AVHRR-derived LAI?  : F
 Use MODIS-derived LAI?  : T
+Use historical emiss?   : F
+ => What decade?        : 2000
+Bromine switches        :---
+ => Use Warwick VSLS?   : T
+ => Use seasalt Br2?    : T
+ => 1ppt MBL BRO Sim.?  : F
+ => Bromine scaling     : 1
 ------------------------+------------------------------------------------------
 %%% AEROSOL MENU %%%    :
 Online SULFATE AEROSOLS : T
@@ -142,8 +156,8 @@ Online 2dy ORG AEROSOLS : F
 Online DUST    AEROSOLS : T
  => Use DEAD emissions? : T
 Online SEASALT AEROSOLS : T
- -- SALA radius bin [um]: 0.1  0.5
- -- SALC radius bin [um]: 0.5  4.0
+ -- SALA radius bin [um]: 0.01 0.5
+ -- SALC radius bin [um]: 0.5  8.0
 Online dicarb. chem.    : F
 ------------------------+------------------------------------------------------
 %%% DEPOSITION MENU %%% :
@@ -152,6 +166,8 @@ Turn on Wet Deposition? : T
 ------------------------+------------------------------------------------------
 %%% CHEMISTRY MENU %%%  : 
 Turn on Chemistry?      : T
+Use linear. strat. chem?: T
+ => Use Linoz for O3?   : T
 Chemistry Timestep [min]: 60
 Read and save CSPEC_FULL: F
 USE solver coded by KPP : T
@@ -220,7 +236,7 @@ ND42: SOA concentrations:  0   all
 ND43: Chem OH,NO,HO2,NO2: 47   all
   ==> OH/HO2 time range :       0 24   
   ==> NO/NO2 time range :      10 14
-ND44: Drydep flx/vel    :  1   all
+ND44: Drydep flx/vel    :  1   1 2 3 7 8 15 16 17 20 22 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 47 48 50
 ND45: Tracer Conc's     : 47   all 
   ==> ND45 Time range   :       0 24
 ND46: Biogenic emissions:  1   all
@@ -236,7 +252,6 @@ ND59: -                 :  0   all
 ND60: Wetland Frac      :  0   all
 ND61: -                 :  0   all
 ND62: Inst column maps  :  0   all
-ND63: -                 :  0   all
 ND64: -                 :  0   all
 ND66: DAO 3-D fields    : 47   all
 ND67: DAO 2-D fields    : 47   all
@@ -295,15 +310,26 @@ IMIN, IMAX of region    :   1  72
 JMIN, JMAX of region    :   1  46
 LMIN, LMAX of region    :   1   1
 ------------------------+------------------------------------------------------
+%%% ND63 MENU %%%       :
+Turn on ND63 diagnostic : F
+Inst 3-D timeser. file  : paranox_ts.YYYYMMDD.bpch
+Tracers to include      : 1
+Frequency [min]         : 120
+IMIN, IMAX of region    :  70  30
+JMIN, JMAX of region    :  23  46
+-------------------------------------------------------------------------------
 %%% PROD & LOSS MENU %%%:
 Turn on P/L (ND65) diag?: F
 # of levels for ND65    : 47
 Save O3 P/L (ND20)?     : F
-Number of P/L families  : 4   
-1st chemical family     : POX: O3 NO2 2NO3 PAN PMN PPN HNO4 3N2O5 HNO3
-2nd chemical family     : LOX: O3 NO2 2NO3 PAN PMN PPN HNO4 3N2O5 HNO3
-3rd chemical family     : PCO: CO
-4th chemical family     : LCO: CO
+Number of P/L families  : 7
+1st  chemical family    : POX: O3 NO2 2NO3 PAN PMN PPN HNO4 3N2O5 HNO3 BrO HOBr BrNO2 2BrNO3
+2nd  chemical family    : LOX: O3 NO2 2NO3 PAN PMN PPN HNO4 3N2O5 HNO3 BrO HOBr BrNO2 2BrNO3
+3rd  chemical family    : PCO: CO
+4th  chemical family    : LCO: CO
+5th  chemical family    : PBrOx: Br BrO
+6th  chemical family    : PBry: 2Br2 Br BrO HOBr HBr BrNO2 BrNO3
+7th  chemical family    : LBry: 2Br2 Br BrO HOBr HBr BrNO2 BrNO3
 ------------------------+------------------------------------------------------
 %%% ARCHIVED OH MENU %%%: 
 Dir w/ archived OH files: /as/data/geos/GEOS_MEAN/OHmerge/v5-07-08/
@@ -325,6 +351,8 @@ Over Europe?            : F
 TPCORE EU BC directory  : BC_2x25_EU/
 Over China?             : F
 TPCORE CH BC directory  : BC_2x25_CH/
+Over SEAC4RS region?    : F
+TPCORE SEAC4RS BC dir   : BC_2x25_SEAC4RS/
 Over Custom Region?     : F
 TPCORE BC directory     : BC_2x25/
 BC timestep [min]       : 180
