@@ -1,39 +1,10 @@
 GEOS-Chem Support Team
 geos-chem-support@as.harvard.edu
-18 Jul 2012
-
+13 Jan 2014
 
 This directory contains input files for the standard simulation as of
-the GEOS-Chem version 9-01-03.
+the GEOS-Chem version 9-02.
 
 This set of input files was used for the 1-month benchmark.
 
-The restart file is to be used with Linoz since the Ox tracer comes from a
-tagged Ox simulation spinned-up with Linoz.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-NOTE: The restart file provided with this run directory has not been properly
-spun up for the updated linearized stratospheric chemistry scheme implemented
-into GEOS-Chem v9-01-03o.
-
-Lee Murray wrote:
-
-  The easiest option would be to do a multi-year simulation from constant
-  initial conditions. I generated my well-spun up file by starting with every
-  tracer set to 1ppt everywhere using
- 
-    make_restart,outm='GEOS5_47L',outr=4,outf='restart.2004010100',
-                 tau0=nymd2tau(20040101L,0L),tr=indgen(53)+1,datavalue=1e-12
-
-  The troposphere will re-equilibriate from 1ppt to actual concentrations
-  fairly quickly, and then you can tell when stratosphere-troposphere
-  equilibrium has become reasonable by check!ing the new online strat-trop
-  exchange diagnostic that outputs to the log file. When you see the fluxes
-  stabilize (e.g., an additional year only changes them by about 1%), you'll
-  know it has reached equilibrium. CO and Ox in March are good proxies for STE.
-
-The existing restart file will be replaced once a properly spun-up restart file
-becomes available.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The restart file was obtained from the GEOS-5 standard directory.
