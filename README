@@ -5,6 +5,4 @@ geos-chem-support@as.harvard.edu
 This directory contains input files for the standard simulation as of
 the GEOS-Chem version 9-02.
 
-This set of input files was used for the 1-month benchmark.
-
 The restart file was obtained from the GEOS-5 standard directory.
