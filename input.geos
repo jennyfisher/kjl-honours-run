@@ -2,18 +2,18 @@ GEOS-CHEM SIMULATION v9-02: MERRA NOx-Ox-HC-Aerosol simulation (66 tracers)
 ------------------------+------------------------------------------------------
 %%% SIMULATION MENU %%% :
 Start YYYYMMDD, HHMMSS  : 20090101 000000
-End   YYYYMMDD, HHMMSS  : 20090101 000000
+End   YYYYMMDD, HHMMSS  : 20090201 000000
 Run directory           : ./
 Input restart file      : restart.4x5.merra.YYYYMMDDhh
 Make new restart file?  : T
 Output restart file(s)  : restart.4x5.merra.YYYYMMDDhh
-Root data directory     : /hpc/data/chemistry/CAC/GEOS-Chem/GEOS_4x5/
+Root data directory     : /hpc/data/chemistry/CAC/GEOS_Chem/GEOS_4x5/
  => GCAP       subdir   : AGRID/YYYY/MM/
  => GEOS-4     subdir   : GEOS_4_v4/YYYY/MM/
  => GEOS-5     subdir   : GEOS_5/YYYY/MM/
  => GEOS-FP    subdir   : GEOS_FP/YYYY/MM/
  => MERRA      subdir   : MERRA/YYYY/MM/
-Dir w/ 1x1 emissions etc: /hpc/data/chemistry/CAC/GEOS-Chem/GEOS_NATIVE/
+Dir w/ 1x1 emissions etc: /hpc/data/chemistry/CAC/GEOS_Chem/GEOS_NATIVE/
 Temporary directory     : ./
 Unzip met fields?       : F
 Wait for met fields?    : F
@@ -90,7 +90,7 @@ Tracer #63              :  63   MAP     76.0
 Tracer #64              :  64   NO2     46.0
 Tracer #65              :  65   NO3     62.0
 Tracer #66              :  66   HNO2    47.0
-Tracer #67              :  67   MOH     34.0
+Tracer #67              :  67   MOH     32.0
 ------------------------+------------------------------------------------------
 %%% TRANSPORT MENU %%%  :
 Turn on Transport       : T
@@ -155,7 +155,7 @@ Use ship SO2 emissions? :---
  => global RCP ?        : F
  => EMEP over EUROPE ?  : T
  => ship SO2 Corbett ?  : F
- => ship SO2 Arctas ?   : T
+ => ship SO2 Arctas ?   : F
 Use COOKE BC/OC (N. Am.): F   
 Use historical emiss?   : F
  => What decade?        : 2000
@@ -220,36 +220,36 @@ ND02: Rn/Pb/Be decay    :  0   all
 ND03: Hg emissions, P/L :  0   all                
 ND04: CO2 Sources       :  0   all                
 ND05: Sulfate prod/loss :  0   all               
-ND06: Dust aer source   :  1   all                
-ND07: Carbon aer source : 47   all                
-ND08: Seasalt aer source:  1   all                
+ND06: Dust aer source   :  0   all                
+ND07: Carbon aer source :  0   all                
+ND08: Seasalt aer source:  0   all                
 ND09: -                 :  0   all                
 ND10: -                 :  0   all                
-ND11: Acetone sources   :  1   all                 
+ND11: Acetone sources   :  0   all                 
 ND12: BL fraction       :  0   all              
-ND13: Sulfur sources    : 47   all                
+ND13: Sulfur sources    :  0   all                
 ND14: Cld conv mass flx :  0   all                
 ND15: BL mix mass flx   :  0   all                
 ND16: LS/Conv prec frac :  0   all               
 ND17: Rainout fraction  :  0   all            
 ND18: Washout fraction  :  0   all            
 ND19: CH4 loss          :  0   all            
-ND21: Optical depths    : 47   all            
-ND22: J-Values          : 47   64 7 8 20 99              
+ND21: Optical depths    :  0   all            
+ND22: J-Values          :  0   64 7 8 20 99              
       => JV time range  :      11 13
 ND24: E/W transpt flx   :  0   all
 ND25: N/S transpt flx   :  0   all
 ND26: U/D transpt flx   :  0   all
 ND27: Strat NOx,Ox,HNO3 :  0   1 2 7
-ND28: Biomass emissions :  1   1 4 5 9 10 11 18 19 20 21 26 30 34 35
+ND28: Biomass emissions :  1   1 4 5 9 10 11 18 19 20 21 26 30 34 35 67
 ND29: CO sources        :  1   all
 ND30: Land Map          :  0   all
 ND31: Surface pressure  : 48   all
 ND32: NOx sources       :  1   all
 ND33: Column tracer     :  0   all
-ND34: Biofuel emissions :  1   1 4 5 9 10 11 18 19 20 21
+ND34: Biofuel emissions :  1   1 4 5 9 10 11 18 19 20 21 67
 ND35: Tracers at 500 mb :  0   all
-ND36: Anthro emissions  :  1   1 2 4 5 7 9 10 11 18 19 20 21
+ND36: Anthro emissions  :  1   1 2 4 5 7 9 10 11 18 19 20 21 67
 ND37: Updraft scav frac :  0   all
 ND38: Cld Conv scav loss: 47   all
 ND39: Wetdep scav loss  : 47   all
@@ -257,14 +257,14 @@ ND41: Afternoon PBL ht  :  0   all
 ND42: SOA concentrations:  0   all
 ND43: Chem OH,NO,HO2,NO2: 47   all
   ==> OH/HO2 time range :       0 24   
-ND44: Drydep flx/vel    : 47   2 3 7 8 9 11 13 14 15 16 17 20 22 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 47 48 50 55 57 58 59 60 61 62 63 64
+ND44: Drydep flx/vel    : 47   2 3 7 8 9 11 13 14 15 16 17 20 22 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 47 48 50 55 57 58 59 60 61 62 63 64 67
 ND45: Tracer Conc's     : 47   all 
   ==> ND45 Time range   :       0 24
 ND46: Biogenic emissions:  1   all
 ND47: 24-h avg trc conc :  0   all
 ND52: GAMMA HO2         :  0   all
 ND53: POPs Emissions    :  0   all
-ND54: Time in t'sphere  : 47   all
+ND54: Time in t'sphere  :  0   all
 ND55: Tropopause height : 47   all
 ND56: Lightning flashes :  0   all
 ND57: Potential T       :  0   all
@@ -273,7 +273,7 @@ ND59: -                 :  0   all
 ND60: Wetland Frac      :  0   all
 ND61: -                 :  0   all
 ND62: Inst column maps  :  0   all
-ND64: -                 :  0   all
+ND64: Methanol src/snk  : 47   all
 ND66: DAO 3-D fields    : 47   all
 ND67: DAO 2-D fields    : 47   all
 ND68: Airmass/Boxheight : 47   all
@@ -343,23 +343,18 @@ JMIN, JMAX of region    :  23  46
 Turn on P/L (ND65) diag?: T
 # of levels for ND65    : 47
 Save O3 P/L (ND20)?     : F
-Number of P/L families  : 7
-1st  chemical family    : POX: O3 NO2 2NO3 PAN PMN PPN HNO4 3N2O5 HNO3 BrO HOBr BrNO2 2BrNO3 MPN
-2nd  chemical family    : LOX: O3 NO2 2NO3 PAN PMN PPN HNO4 3N2O5 HNO3 BrO HOBr BrNO2 2BrNO3 MPN
-3rd  chemical family    : PCO: CO
-4th  chemical family    : LCO: CO
-5th  chemical family    : PBrOx: Br BrO
-6th  chemical family    : PBry: 2Br2 Br BrO HOBr HBr BrNO2 BrNO3
-7th  chemical family    : LBry: 2Br2 Br BrO HOBr HBr BrNO2 BrNO3
+Number of P/L families  : 2
+1st  chemical family    : PMOH: MOH
+2nd  chemical family    : LMOH: MOH
 ------------------------+------------------------------------------------------
 %%% ARCHIVED OH MENU %%%: 
-Dir w/ archived OH files: /hpc/data/chemistry/CAC/GEOS-Chem/GEOS_MEAN/OHmerge/v5-07-08/
+Dir w/ archived OH files: /hpc/data/chemistry/CAC/GEOS_Chem/GEOS_MEAN/OHmerge/v5-07-08/
 ------------------------+------------------------------------------------------
 %%% O3 P/L MENU %%%     : 
-Dir w/ O3 P/L rate files: /hpc/data/chemistry/CAC/GEOS-Chem/GEOS_MEAN/O3_PROD_LOSS/2003.v6-01-05/
+Dir w/ O3 P/L rate files: /hpc/data/chemistry/CAC/GEOS_Chem/GEOS_MEAN/O3_PROD_LOSS/2003.v6-01-05/
 ------------------------+------------------------------------------------------
 %%% BENCHMARK MENU %%%  :  
-Save benchmark output?  : T
+Save benchmark output?  : F
 File w/ initial Ox      : Ox.mass.initial
 File w/ final Ox        : Ox.mass.final
 ------------------------+------------------------------------------------------
