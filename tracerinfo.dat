@@ -1,5 +1,5 @@
 #==============================================================================
-# tracerinfo.dat: Created by GEOS-CHEM at 2014/01/09 18:55
+# tracerinfo.dat: Created by GEOS-CHEM at 2015/04/10 13:01
 #
 # ****** CUSTOMIZED FOR NOx-Ox-Hydrocarbon-Aerosol SIMULATION *****
 #
@@ -87,6 +87,8 @@ MAP      MAP tracer                     7.600E-02  1       63 1.000E+09 ppbv
 NO2      NO2 tracer                     4.600E-02  1       64 1.000E+09 ppbv
 NO3      NO3 tracer                     6.200E-02  1       65 1.000E+09 ppbv
 HNO2     HNO2 tracer                    4.700E-02  1       66 1.000E+09 ppbv
+MOH      MOH tracer                     3.200E-02  1       67 1.000E+09 ppbv
+HCN      HCN tracer                     2.700E-02  1       68 1.000E+09 ppbv
 #==============================================================================
 # GEOS-CHEM tracers [molec/cm2/s]
 #==============================================================================
@@ -156,6 +158,8 @@ MAP      MAP tracer                     7.600E-02  1     1063 1.000E+00 molec/cm
 NO2      NO2 tracer                     4.600E-02  1     1064 1.000E+00 molec/cm2/s
 NO3      NO3 tracer                     6.200E-02  1     1065 1.000E+00 molec/cm2/s
 HNO2     HNO2 tracer                    4.700E-02  1     1066 1.000E+00 molec/cm2/s
+MOH      MOH tracer                     3.200E-02  1     1067 1.000E+00 molec/cm2/s
+HCN      HCN tracer                     2.700E-02  1     1068 1.000E+00 molec/cm2/s
 #==============================================================================
 # GEOS-CHEM tracers [molec/cm2]
 #==============================================================================
@@ -225,6 +229,8 @@ MAP      MAP tracer                     7.600E-02  1     2063 1.000E+00 molec/cm
 NO2      NO2 tracer                     4.600E-02  1     2064 1.000E+00 molec/cm2
 NO3      NO3 tracer                     6.200E-02  1     2065 1.000E+00 molec/cm2
 HNO2     HNO2 tracer                    4.700E-02  1     2066 1.000E+00 molec/cm2
+MOH      MOH tracer                     3.200E-02  1     2067 1.000E+00 molec/cm2
+HCN      HCN tracer                     2.700E-02  1     2068 1.000E+00 molec/cm2
 #==============================================================================
 # GEOS-CHEM tracers [kg/s]
 #==============================================================================
@@ -294,6 +300,8 @@ MAP      MAP tracer                     7.600E-02  1     3063 1.000E+00 kg/s
 NO2      NO2 tracer                     4.600E-02  1     3064 1.000E+00 kg/s
 NO3      NO3 tracer                     6.200E-02  1     3065 1.000E+00 kg/s
 HNO2     HNO2 tracer                    4.700E-02  1     3066 1.000E+00 kg/s
+MOH      MOH tracer                     3.200E-02  1     3067 1.000E+00 kg/s
+HCN      HCN tracer                     2.700E-02  1     3068 1.000E+00 kg/s
 #==============================================================================
 # GEOS-CHEM tracers [kg]
 #==============================================================================
@@ -363,6 +371,8 @@ MAP      MAP tracer                     7.600E-02  1     4063 1.000E+00 kg
 NO2      NO2 tracer                     4.600E-02  1     4064 1.000E+00 kg
 NO3      NO3 tracer                     6.200E-02  1     4065 1.000E+00 kg
 HNO2     HNO2 tracer                    4.700E-02  1     4066 1.000E+00 kg
+MOH      MOH tracer                     3.200E-02  1     4067 1.000E+00 kg
+HCN      HCN tracer                     2.700E-02  1     4068 1.000E+00 kg
 #==============================================================================
 # Quantities for Soil NOx restart file
 #==============================================================================
@@ -371,78 +381,16 @@ PFACTOR  PFACTOR                        1.000E+00  1    60002 1.000E+00 unitless
 GWET_PRV GWET_PRV                       1.000E+00  1    60003 1.000E+00 unitless
 N_RESVR  N_RESVR                        1.000E+00  1    60004 1.000E+00 ng N/m2
 #==============================================================================
-# ND05 diagnostic quantities
+# ND09 diagnostic quantities
 #==============================================================================
-SO2dms   P(SO2) from DMS+OH             3.200E-02  1    18001 1.000E+00 kg S
-SO2no3   P(SO2) from DMS+NO3            3.200E-02  1    18002 1.000E+00 kg S
-SO2tot   Total P(SO2)                   3.200E-02  1    18003 1.000E+00 kg S
-MSAdms   P(MSA) from DMS                3.200E-02  1    18004 1.000E+00 kg S
-SO4gas   P(SO4) by gas phase            3.200E-02  1    18005 1.000E+00 kg S
-SO4h2o2  P(SO4) by cloud H2O2           3.200E-02  1    18006 1.000E+00 kg S
-SO4o3    P(SO4) by cloud O3             3.200E-02  1    18007 1.000E+00 kg S
-SO4ss    P(SO4) by seasalt O3           3.200E-02  1    18008 1.000E+00 kg S
-LOH      L(OH) by DMS                   1.700E-02  1    18009 1.000E+00 kg OH
-LNO3     L(NO3) by DMS                  6.200E-02  1    18010 1.000E+00 kg NO3
-#==============================================================================
-# ND07 diagnostic quantities
-#==============================================================================
-BLKC     Black (Elemental) Carbon       1.200E-02  1    33034 1.000E+00 kgC
-ORGC     Organic Carbon                 1.200E-02  1    33035 1.000E+00 kgC
-#==============================================================================
-# ND11 diagnostic quantities
-#==============================================================================
-ACETmo   ACET from monoterpenes         1.200E-02  3    22001 1.000E+00 atoms C/cm2/s
-ACETmb   ACET from methyl butenol       1.200E-02  3    22002 1.000E+00 atoms C/cm2/s
-ACETbg   ACET from direct emissions     1.200E-02  3    22003 1.000E+00 atoms C/cm2/s
-ACETop   ACET from ocean source         1.200E-02  3    22004 1.000E+00 atoms C/cm2/s
-ACETol   ACET from ocean sink           1.200E-02  3    22005 1.000E+00 atoms C/cm2/s
-#==============================================================================
-# ND21 diagnostic quantities
-#==============================================================================
-OPTD     Cloud optical depth            0.000E+00  1    14001 1.000E+00 unitless
-CLDTOT   3-D cloud frc                  0.000E+00  1    14002 1.000E+00 unitless
-                                        0.000E+00  1    14003 1.000E+00 unitless
-OPD      Mineral dust opt depth         0.000E+00  1    14004 1.000E+00 unitless
-SD       Mineral dust surface area      0.000E+00  1    14005 1.000E+00 cm2/cm3
-OPSO4    Sulfate opt depth (550 nm)     0.000E+00  1    14006 1.000E+00 unitless
-HGSO4    Hygr growth of SO4             0.000E+00  1    14007 1.000E+00 unitless
-SSO4     Sulfate surface area           0.000E+00  1    14008 1.000E+00 cm2/cm3
-OPBC     Black carbon opt depth (550 nm 0.000E+00  1    14009 1.000E+00 unitless
-HGBC     Hygr growth of BC              0.000E+00  1    14010 1.000E+00 unitless
-SBC      BC surface area                0.000E+00  1    14011 1.000E+00 cm2/cm3
-OPOC     Org carbon opt depth (550 nm)  0.000E+00  1    14012 1.000E+00 unitless
-HGOC     Hygr growth of OC              0.000E+00  1    14013 1.000E+00 unitless
-SOC      OC surface area                0.000E+00  1    14014 1.000E+00 cm2/cm3
-OPSSa    Seasalt (accum) opt depth (550 0.000E+00  1    14015 1.000E+00 unitless
-HGSSa    Hygr growth of seasalt (accum) 0.000E+00  1    14016 1.000E+00 unitless
-SSSa     Seasalt (accum) surface area   0.000E+00  1    14017 1.000E+00 cm2/cm3
-OPSSc    Seasalt (coarse) opt depth (55 0.000E+00  1    14018 1.000E+00 unitless
-HGSSc    Hygr growth of seasalt (coarse 0.000E+00  1    14019 1.000E+00 unitless
-SSSc     Seasalt (coarse) surface area  0.000E+00  1    14020 1.000E+00 cm2/cm3
-OPD1     Dust bin 1 AOD (550 nm)        0.000E+00  1    14021 1.000E+00 unitless
-OPD2     Dust bin 2 AOD (550 nm)        0.000E+00  1    14022 1.000E+00 unitless
-OPD3     Dust bin 3 AOD (550 nm)        0.000E+00  1    14023 1.000E+00 unitless
-OPD4     Dust bin 4 AOD (550 nm)        0.000E+00  1    14024 1.000E+00 unitless
-OPD5     Dust bin 5 AOD (550 nm)        0.000E+00  1    14025 1.000E+00 unitless
-OPD6     Dust bin 6 AOD (550 nm)        0.000E+00  1    14026 1.000E+00 unitless
-OPD7     Dust bin 7 AOD (550 nm)        0.000E+00  1    14027 1.000E+00 unitless
-#==============================================================================
-# ND22 diagnostic quantities
-#==============================================================================
-JNO2     JNO2 photolysis rate           0.000E+00  1    13001 1.000E+00 s-1
-JHNO3    JHNO3 photolysis rate          0.000E+00  1    13002 1.000E+00 s-1
-JH2O2    JH2O2 photolysis rate          0.000E+00  1    13003 1.000E+00 s-1
-JCH2O    JCH2O photolysis rate          0.000E+00  1    13004 1.000E+00 s-1
-JO3      JO3 photolysis rate            0.000E+00  1    13005 1.000E+00 s-1
-POH      POH photolysis rate            0.000E+00  1    13006 1.000E+00 s-1
-JGLYX    JGLYX photolysis rate          0.000E+00  1    13007 1.000E+00 s-1
-JMGLY    JMGLY photolysis rate          0.000E+00  1    13008 1.000E+00 s-1
-JBrO     JBrO photolysis rate           0.000E+00  1    13009 1.000E+00 s-1
-JHOBr    JHOBr photolysis rate          0.000E+00  1    13010 1.000E+00 s-1
-JBrNO2   JBrNO2 photolysis rate         0.000E+00  1    13011 1.000E+00 s-1
-JBrNO3   JBrNO3 photolysis rate         0.000E+00  1    13012 1.000E+00 s-1
-JCHBr3   JCHBr3 photolysis rate         0.000E+00  1    13013 1.000E+00 s-1
-JBr2     JBr2 photolysis rate           0.000E+00  1    13014 1.000E+00 s-1
+HCN_OH   HCN lost via OH rxn            2.700E-02  1    38068 1.000E+00 kg
+HCN_O1D  HCN lost via O1D rxn           2.700E-02  1    38069 1.000E+00 kg
+HCNbb    HCN biomass emissions          2.700E-02  1    39001 1.000E+00 molec/cm2/s
+CH3CNbb  CH3CN biomass emissions        4.100E-02  1    39002 1.000E+00 molec/cm2/s
+HCNdf    HCN domestic FF emiss          2.700E-02  1    39003 1.000E+00 molec/cm2/s
+CH3CNdf  CH3CN domestic FF emiss        4.100E-02  1    39004 1.000E+00 molec/cm2/s
+HCNoc    HCN ocean uptake               2.700E-02  1    39005 1.000E+00 molec/cm2/s
+CH3CNoc  CH3CN ocean uptake             4.100E-02  1    39006 1.000E+00 molec/cm2/s
 #==============================================================================
 # ND28 diagnostic quantities
 #==============================================================================
@@ -460,6 +408,10 @@ SO2      SO2 biomass                    3.200E-02  1    45026 1.000E+00 atoms S/
 NH3      NH3 biomass                    1.700E-02  1    45030 1.000E+00 molec/cm2/s
 BC       BC biomass                     1.200E-02  1    45034 1.000E+00 atoms C/cm2/s
 OC       OC biomass                     1.200E-02  1    45035 1.000E+00 atoms C/cm2/s
+HAC      HAC biomass                    7.400E-02  1    45058 1.000E+00 molec/cm2/s
+GLYC     GLYC biomass                   6.000E-02  1    45059 1.000E+00 molec/cm2/s
+MOH      MOH biomass                    3.200E-02  1    45067 1.000E+00 molec/cm2/s
+HCN      HCN biomass                    2.700E-02  1    45068 1.000E+00 molec/cm2/s
 #==============================================================================
 # ND29 diagnostic quantities
 #==============================================================================
@@ -472,11 +424,6 @@ COmono   CO from monoterpenes           2.800E-02  1    20005 1.000E+00 molec/cm
 # ND31 diagnostic quantities
 #==============================================================================
 PSURF    Surface pressure               0.000E+00  1    10001 1.000E+00 hPa
-#==============================================================================
-# ND41 diagnostic quantities
-#==============================================================================
-PBL-M    PBL depth                      0.000E+00  1    27001 1.000E+00 m
-PBL-L    PBL depth                      0.000E+00  1    27002 1.000E+00 levels
 #==============================================================================
 # ND43 diagnostic quantities
 #==============================================================================
@@ -530,16 +477,17 @@ HOBrdf   HOBr drydep flux               9.700E-02  1    36047 1.000E+00 molec/cm
 HBrdf    HBr drydep flux                8.100E-02  1    36048 1.000E+00 molec/cm2/s
 BrNO3df  BrNO3 drydep flux              1.420E-01  1    36050 1.000E+00 molec/cm2/s
 ISOPNDdf ISOPND drydep flux             1.470E-01  1    36055 1.000E+00 molec/cm2/s
-ISOPNBdf ISOPNB drydep flux             1.470E-01  1    36067 1.000E+00 molec/cm2/s
+ISOPNBdf ISOPNB drydep flux             1.470E-01  1    36069 1.000E+00 molec/cm2/s
 PROPNNdf PROPNN drydep flux             1.090E-01  1    36057 1.000E+00 molec/cm2/s
 HACdf    HAC drydep flux                7.400E-02  1    36058 1.000E+00 molec/cm2/s
 GLYCdf   GLYC drydep flux               6.000E-02  1    36059 1.000E+00 molec/cm2/s
 MACRNdf  MACRN drydep flux              1.490E-01  1    36060 1.000E+00 molec/cm2/s
-MVKNdf   MVKN drydep flux               1.490E-01  1    36068 1.000E+00 molec/cm2/s
+MVKNdf   MVKN drydep flux               1.490E-01  1    36070 1.000E+00 molec/cm2/s
 RIPdf    RIP drydep flux                1.180E-01  1    36061 1.000E+00 molec/cm2/s
 IEPOXdf  IEPOX drydep flux              1.180E-01  1    36062 1.000E+00 molec/cm2/s
 MAPdf    MAP drydep flux                7.600E-02  1    36063 1.000E+00 molec/cm2/s
 NO2df    NO2 drydep flux                4.600E-02  1    36064 1.000E+00 molec/cm2/s
+MOHdf    MOH drydep flux                3.200E-02  1    36067 1.000E+00 molec/cm2/s
 O3dv     O3 drydep velocity             4.800E-02  1    37002 1.000E+00 cm/s
 PANdv    PAN drydep velocity            1.210E-01  1    37003 1.000E+00 cm/s
 HNO3dv   HNO3 drydep velocity           6.300E-02  1    37007 1.000E+00 cm/s
@@ -576,16 +524,17 @@ HOBrdv   HOBr drydep velocity           9.700E-02  1    37047 1.000E+00 cm/s
 HBrdv    HBr drydep velocity            8.100E-02  1    37048 1.000E+00 cm/s
 BrNO3dv  BrNO3 drydep velocity          1.420E-01  1    37050 1.000E+00 cm/s
 ISOPNDdv ISOPND drydep velocity         1.470E-01  1    37055 1.000E+00 cm/s
-ISOPNBdv ISOPNB drydep velocity         1.470E-01  1    37067 1.000E+00 cm/s
+ISOPNBdv ISOPNB drydep velocity         1.470E-01  1    37069 1.000E+00 cm/s
 PROPNNdv PROPNN drydep velocity         1.090E-01  1    37057 1.000E+00 cm/s
 HACdv    HAC drydep velocity            7.400E-02  1    37058 1.000E+00 cm/s
 GLYCdv   GLYC drydep velocity           6.000E-02  1    37059 1.000E+00 cm/s
 MACRNdv  MACRN drydep velocity          1.490E-01  1    37060 1.000E+00 cm/s
-MVKNdv   MVKN drydep velocity           1.490E-01  1    37068 1.000E+00 cm/s
+MVKNdv   MVKN drydep velocity           1.490E-01  1    37070 1.000E+00 cm/s
 RIPdv    RIP drydep velocity            1.180E-01  1    37061 1.000E+00 cm/s
 IEPOXdv  IEPOX drydep velocity          1.180E-01  1    37062 1.000E+00 cm/s
 MAPdv    MAP drydep velocity            7.600E-02  1    37063 1.000E+00 cm/s
 NO2dv    NO2 drydep velocity            4.600E-02  1    37064 1.000E+00 cm/s
+MOHdv    MOH drydep velocity            3.200E-02  1    37067 1.000E+00 cm/s
 #==============================================================================
 # ND46 diagnostic quantities
 #==============================================================================
@@ -609,57 +558,29 @@ OMTP     OMTP emissions                 1.200E-02 10    21017 1.000E+00 atoms C/
 CHBr3    Ocean bromoform emissions      2.530E-01  0    21018 1.000E+00 kg/m2/s
 CH2Br2   Ocean dibromomethane emissions 1.740E-01  0    21019 1.000E+00 kg/m2/s
 SSBr2    sea-salt Br2 emissions         1.600E-01  0    21020 1.000E+00 kg/m2/s
+MOH      MOH emissions                  1.200E-02  1    21021 1.000E+00 atoms C/cm2/s
 #==============================================================================
-# ND48 diagnostic quantities
+# ND55 diagnostic quantities
 #==============================================================================
-O3       O3 time series                 4.800E-02  1    19001 1.000E+09 ppbv
-OH       OH time series                 0.000E+00  1    19002 1.000E+00 molec/cm3
-NOy      NOy time series                0.000E+00  1    19003 1.000E+09 ppbv
-NO2dv    NO2 drydep vel                 0.000E+00  1    19004 1.000E+00 cm/s
-O3dv     O3 drydep vel                  0.000E+00  1    19005 1.000E+00 cm/s
-PANdv    PAN drydep vel                 0.000E+00  1    19006 1.000E+00 cm/s
-HNO3dv   HNO3 drydep vel                0.000E+00  1    19007 1.000E+00 cm/s
-H2O2dv   H2O2 drydep vel                0.000E+00  1    19008 1.000E+00 cm/s
-NO       NO time series                 3.000E-02  1    19009 1.000E+09 ppbv
-PBLTOP   PBL top pressure               0.000E+00  1    19010 1.000E+00 hPa
-LT       Station local time             0.000E+00  1    19011 1.000E+00 h
-ISOPf    ISOP emission flux             1.200E-02  1    19012 1.000E+00 molec/cm2/s
-MOLEN    Monin-Obhukov length           0.000E+00  1    19013 1.000E+00 m
-NO3      NO3 time series                6.200E-02  1    19014 1.000E+09 ppbv
-PS       Surface pressure               0.000E+00  1    19015 1.000E+00 hPa
-AVGW     Water vapor mixing ratio       3.300E-02  1    19016 1.000E+09 ppbv
-RH       Relative humidity              0.000E+00  1    19017 1.000E+00 %
-HCNcol   HCN column density             0.000E+00  1    19018 1.000E+00 molec/cm2
-CF       Cloud fraction                 0.000E+00  1    19019 1.000E+00 unitless
-ODCOL    Cloud optical depth            0.000E+00  1    19020 1.000E+00 unitless
-CThgt    Cloud top height               0.000E+00  1    19021 1.000E+00 hPa
-AIRDEN   Air density                    0.000E+00  1    19022 1.000E+00 molec/cm3
-TOTDUST  Total dust opt depth           0.000E+00  1    19023 1.000E+00 unitless
-TOTSALT  Total seasalt tracer           3.600E-02  1    19024 1.000E+09 ppbv
-NO2      NO2 concentration              4.600E-02  1    19025 1.000E+09 ppbv
-TOTAOD   Total aerosol opt depth        0.000E+00  1    19026 1.000E+00 unitless
-G_T      Temperature activity factor    0.000E+00  1    19027 1.000E+00 unitless
-G_PAR    Light activity factor          0.000E+00  1    19028 1.000E+00 unitless
-G_AGE    Leaf-age activity factor       0.000E+00  1    19029 1.000E+00 unitless
-G_LAI    LAI activity factor            0.000E+00  1    19030 1.000E+00 unitless
-G_SM     Soil-moisture activity factor  0.000E+00  1    19031 1.000E+00 unitless
-D_LAI    Daily LAI                      0.000E+00  1    19032 1.000E+00 m2/m2
+TP-LEVEL Tropopause level               0.000E+00  1    26001 1.000E+00 level
+TP-HGHT  Tropopause height              0.000E+00  1    26002 1.000E+00 km
+TP-PRESS Tropopause pressure            0.000E+00  1    26003 1.000E+00 hPa
 #==============================================================================
-# ND54 diagnostic quantities
+# ND64 diagnostic quantities
 #==============================================================================
-TIMETROP Time in the troposphere        0.000E+00  1    46001 1.000E+00 unitless
+MOHan    MOH from anthro emis           3.200E-02  1    64001 1.000E+00 molec/cm2/s
+MOHbb    MOH from biomass burning       3.200E-02  1    64002 1.000E+00 molec/cm2/s
+MOHbf    MOH from biofuel emissions     3.200E-02  1    64003 1.000E+00 molec/cm2/s
+MOHbg    MOH from biogenic emissions    3.200E-02  1    64004 1.000E+00 molec/cm2/s
+MOHop    MOH from ocean source          3.200E-02  1    64005 1.000E+00 molec/cm2/s
+MOHol    MOH from ocean sink            3.200E-02  1    64006 1.000E+00 molec/cm2/s
+MOHcl    MOH from cloud uptake          3.200E-02  1    64007 1.000E+00 molec/cm3/s
 #==============================================================================
 # ND65 diagnostic quantities
 #==============================================================================
-POX      POX P/L family                 0.000E+00  1    17001 1.000E+00 molec/cm3/s
-LOX      LOX P/L family                 0.000E+00  1    17002 1.000E+00 molec/cm3/s
-PCO      PCO P/L family                 2.800E-02  1    17003 1.000E+00 molec/cm3/s
-LCO      LCO P/L family                 2.800E-02  1    17004 1.000E+00 molec/cm3/s
-PBrOx    PBrOx P/L family               0.000E+00  1    17005 1.000E+00 molec/cm3/s
-PBry     PBry P/L family                0.000E+00  1    17006 1.000E+00 molec/cm3/s
-LBry     LBry P/L family                0.000E+00  1    17007 1.000E+00 molec/cm3/s
-PH2O2    PH2O2 P/L family               3.400E-02  1    17008 1.000E+00 molec/cm3/s
-LH2O2    LH2O2 P/L family               3.400E-02  1    17009 1.000E+00 molec/cm3/s
+PMOH     PMOH P/L family                3.200E-02  1    17001 1.000E+00 molec/cm3/s
+LMOH     LMOH P/L family                3.200E-02  1    17002 1.000E+00 molec/cm3/s
+LHCN     LHCN P/L family                2.700E-02  1    17003 1.000E+00 molec/cm3/s
 #==============================================================================
 # ND66 diagnostic quantities
 #==============================================================================
@@ -702,3 +623,7 @@ BXHEIGHT Grid box height                0.000E+00  1    24001 1.000E+00 m
 AD       Air mass in grid box           0.000E+00  1    24002 1.000E+00 kg
 AVGW     Mixing ratio of H2O vapor      0.000E+00  1    24003 1.000E+00 v/v
 N(AIR)   Number density of air          0.000E+00  1    24004 1.000E+00 molec/m3
+#==============================================================================
+# ND69 diagnostic quantities
+#==============================================================================
+DXYP     Grid box surface area          0.000E+00  1    25001 1.000E+00 m2

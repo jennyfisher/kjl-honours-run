@@ -1,5 +1,5 @@
 #==============================================================================
-# diaginfo.dat: Created by GEOS-CHEM at 2014/01/09 18:55
+# diaginfo.dat: Created by GEOS-CHEM at 2015/04/10 13:01
 #
 # ****** CUSTOMIZED FOR NOx-Ox-Hydrocarbon-Aerosol SIMULATION *****
 #
@@ -157,3 +157,4 @@
    60000 RST-SOIL                                 Soil NOx restart file                   
    52000 PG-SRCE                                  POPs Emissions                          
    53000 PG-PP-$                                  POP partitioning/oxidation              
+   64000 MOH-SRCE                                 Methanol emissions                      
